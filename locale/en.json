@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Gateway SSH",
+    "description": "Sign in to one or more Gateway accounts from Settings so agents and DSH Bots can use servers through Gateway; IP addresses and this computer's name are hidden before results reach the AI."
+  }
+}

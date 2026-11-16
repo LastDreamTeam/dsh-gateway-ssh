@@ -1,0 +1,11 @@
+# @lastdreamteam/dsh-gateway-ssh：向 profile 插入 Gateway SSH 插件行。
+# 账号在 DSH「设置 → Gateway SSH」中登录，这里不需要也不应写入任何令牌。
+- insert:
+    - id: gateway-ssh
+      name: '@lastdreamteam/dsh-gateway-ssh'
+      config:
+        announceToAgent: true
+        # 结果脱敏默认开启；如需关闭某项可改为 false。
+        redact:
+          ip: true
+          host: true

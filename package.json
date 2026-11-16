@@ -1,0 +1,72 @@
+{
+  "name": "@lastdreamteam/dsh-gateway-ssh",
+  "version": "1.1.0",
+  "description": "DSH plugin: bind one or more Gateway SSH accounts from Settings with browser OAuth; IP addresses and the local computer name are hidden before results reach agents.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "lib/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "gateway",
+    "ssh",
+    "mcp",
+    "oauth"
+  ],
+  "scripts": {
+    "check": "node --check index.js && node --check client.js && node --check lib/redact.js && node --check lib/store.js && node --check lib/oauth.js && node --check lib/connection.js && node --check lib/routes.js",
+    "test": "node test/connection.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.12.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0-0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  },
+  "devDependencies": {
+    "zod": "^4.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "homepage": "https://github.com/LastDreamTeam/dsh-gateway-ssh#readme",
+  "bugs": {
+    "url": "https://github.com/LastDreamTeam/dsh-gateway-ssh/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LastDreamTeam/dsh-gateway-ssh.git"
+  }
+}

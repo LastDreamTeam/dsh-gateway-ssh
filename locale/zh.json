@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Gateway SSH",
+    "description": "在设置中用浏览器登录一个或多个 Gateway 账号，让 Agent 和 DSH Bot 通过 Gateway 安全地使用服务器；结果在交给 AI 前隐藏 IP 和本机名。"
+  }
+}
